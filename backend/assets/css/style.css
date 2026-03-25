@@ -1,0 +1,153 @@
+.app-review-box{
+width:96%;
+padding-bottom: 20px;
+}
+
+.app-review-box.disabled {
+    background: #fff;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.app-review-tools{
+    margin-top: 20px;
+}
+
+.app-review-list{
+    margin-top: 20px;
+    display:inline-block;
+    height: calc(100vh - 280px);
+    overflow: auto;
+}
+
+.app-review-list table,
+.app-review-list th,
+.app-review-list td {
+    border: none !important;
+}
+
+.app-review-list table thead th {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    height:20px
+}
+
+.app-review-list table {
+    border-collapse: collapse;
+}
+
+.app-review-pagination{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.frm-msg {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateY(-100%);
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    opacity: 0;
+    z-index: 10;
+    width: 80%;
+    margin: 0 10%;
+    z-index:99999999999999999999
+}
+
+.frm-msg.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.msg-success {
+    background-color: #e3f2fd !important;
+    color: #0d47a1 !important;
+    border-bottom: 1px solid #bbdefb;
+}
+
+.msg-error {
+    background-color: #fdecea !important;
+    color: #d32f2f !important;
+    border-bottom: 1px solid #f5c6cb;
+}
+
+
+.frm-overlay {
+    position: fixed;
+    inset: 0; 
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+}
+
+.frm-confirm-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    width: 420px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frm-confirm-actions {
+    margin-top: 15px;
+}
+
+.frm-confirm-actions button {
+    margin: 0 5px;
+}
+
+.confirm-button {
+    background-color: #0a41d8;; 
+    color: #fff;
+    border: 1px solid #0a41d8;; 
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.confirm-button:hover {
+    background-color: #2956d1;
+    border-color: #2956d1;
+}
+
+.confirm-button:active {
+    background-color: #2956d1;
+    border-color: #2956d1; 
+}
+
+#frm-confirm-text {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    background: #fff;
+    color: #1d2327;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    display: none;
+}
